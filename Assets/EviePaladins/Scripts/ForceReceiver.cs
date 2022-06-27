@@ -32,7 +32,7 @@ public class ForceReceiver : MonoBehaviour
         }
         else
         {
-            verticalVelocity += Physics.gravity.y * .2f * Time.deltaTime;
+            verticalVelocity += Physics.gravity.y * .5f * Time.deltaTime;
         }
     }
 
@@ -44,5 +44,10 @@ public class ForceReceiver : MonoBehaviour
         {
             verticalVelocity = 0;
         }
+    }
+
+    public void ResetVerticalVelocity()
+    {
+        verticalVelocity = 0;
     }
 }
